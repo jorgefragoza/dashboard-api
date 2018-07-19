@@ -1,0 +1,25 @@
+{
+  "name": "dashboard-api",
+  "version": "1.0.0",
+  "description": "api dashboard para visualizar metricas del bot de whatsapp YaloChat",
+  "main": "main.js",
+  "scripts": {
+    "clean": "rm -rf ./build",
+    "build": "npm run clean && tsc",
+    "start": "node ./build/main.js"
+  },
+  "author": "Jorge Fragoza",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^3.0.8",
+    "jsonwebtoken": "^8.2.2",
+    "cors": "^2.8.4",
+    "bcrypt": "^2.0.1"
+  }
+}
