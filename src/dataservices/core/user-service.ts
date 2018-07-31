@@ -1,7 +1,7 @@
-import { IDataService } from './i-data-service';
+import { IDataService } from '../i-data-service';
 import { MongoClient } from 'mongodb';
-import ENV from './../environment';
-import { resolve } from 'dns';
+import ENV from '../../environment';
+// import { resolve } from 'dns';
 
 export class UserService implements IDataService {
     private collection: string;
