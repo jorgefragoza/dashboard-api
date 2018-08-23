@@ -17,8 +17,8 @@ function init() {
     app.use(bodyParser.urlencoded({ extended: true }));
 
     app.use((req, res, next) => {
-        const url: any = req.headers['url'];
-        const method: any = req.headers['method'];
+        const url: any = req.url;
+        const method: any = req.method;
         const remoteAddress: string = req.connection.remoteAddress || '0.0.0.0';
 
         // validacion de permisos
@@ -29,7 +29,7 @@ function init() {
         }
 
         next();
-    })
+    });
 
     ConfigRouter.map(route => {
         app.use('/', route);
@@ -37,7 +37,7 @@ function init() {
 
     app.listen(port, () => {
         console.log(`sucessful start`);
-    })
+    });
 }
 
 init();

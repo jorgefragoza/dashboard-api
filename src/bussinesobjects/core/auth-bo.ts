@@ -3,7 +3,7 @@ import { _response } from '../../utils/_response';
 import { Auth } from '../../utils/auth';
 import bcrypt from 'bcrypt';
 
-export class UserBO {
+export class AuthBO {
     private userService: UserService;
     private auth: Auth;
     private SALT_WORK_FACTOR: number = 10;
